@@ -1,0 +1,253 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #1e1e2f;
+  color: #f0f0f0;
+}
+
+/* Container Layout */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+  width: 250px;
+  background-color: #24243e;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #ff6b6b;
+}
+
+.sidebar ul {
+  list-style-type: none;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #dcdde1;
+  padding: 12px;
+  display: block;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  background-color: #ff6b6b;
+  color: #1e1e2f;
+}
+
+/* Main Content Area */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #282a36;
+  overflow-y: auto;
+}
+
+/* Panel Styling */
+.panel {
+  background: #333547;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.panel h3 {
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  color: #f1fa8c;
+}
+
+/* Summary Section */
+.summary {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.summary p {
+  margin: 0 10px;
+  padding: 10px;
+  background: #44475a;
+  border-radius: 8px;
+  color: #ff79c6;
+  font-weight: bold;
+}
+
+/* Charts Section */
+.charts {
+  display: flex;
+  gap: 20px;
+}
+
+.chart {
+  flex: 1;
+  height: 150px;
+  background-color: #44475a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table th,
+table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #555;
+  color: #f8f8f2;
+}
+
+table th {
+  background-color: #6272a4;
+}
+
+table tr:hover {
+  background-color: #44475a;
+}
+
+/* Risk Dashboard Styling */
+.risk-metrics {
+  display: flex;
+  justify-content: space-around;
+  background-color: #44475a;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.risk-metrics div {
+  padding: 10px 20px;
+  background-color: #6272a4;
+  border-radius: 8px;
+}
+
+/* Goals Section */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  padding: 10px;
+  background-color: #44475a;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Calendar Section */
+#calendar-widget {
+  padding: 10px;
+  background-color: #44475a;
+  border-radius: 8px;
+  color: #ffb86c;
+}
+
+/* Interactive Charts */
+canvas {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Hover Effects */
+.panel:hover {
+  box-shadow: 0 6px 12px rgba(255, 107, 107, 0.3);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .sidebar ul {
+    display: flex;
+    gap: 10px;
+  }
+
+  .main-content {
+    padding: 10px;
+  }
+
+  .chart {
+    height: 100px;
+  }
+}
+
+/* Risk Dashboard Enhanced Styling */
+.risk-charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
+.risk-charts .chart {
+  position: relative;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.risk-charts .chart canvas {
+  max-width: 100%;
+  height: 200px;
+}
+
+.risk-charts .chart p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+}
+
+.risk-charts .chart span {
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Hover Effect */
+.risk-charts .chart:hover {
+  border-color: #007bff;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}

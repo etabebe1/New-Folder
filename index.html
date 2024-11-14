@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enhanced Trading Journal Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Left Panel (Navigation) -->
+      <aside class="sidebar">
+        <h2>Trading Journal</h2>
+        <ul>
+          <li><a href="#performance">📊 Performance Summary</a></li>
+          <li><a href="#tradelog">📋 Trade Log</a></li>
+          <li><a href="#risk">💹 Risk Dashboard</a></li>
+          <li><a href="#psych">🧠 Psychological Tracker</a></li>
+          <li><a href="#strategy">📈 Strategy Evaluation</a></li>
+          <li><a href="#analytics">📉 Advanced Analytics</a></li>
+          <li><a href="#calendar">📅 Calendar</a></li>
+          <li><a href="#goals">🏆 Goals & Milestones</a></li>
+        </ul>
+      </aside>
+
+      <!-- Right Main Content -->
+      <main class="main-content">
+        <!-- Performance Summary -->
+        <section id="performance" class="panel">
+          <h3>Performance Summary</h3>
+          <div class="charts">
+            <div class="chart" id="daily-chart">
+              <canvas id="dailyPLChart"></canvas>
+            </div>
+            <div class="chart" id="weekly-chart">
+              <canvas id="weeklyPLChart"></canvas>
+            </div>
+            <div class="chart" id="monthly-chart">
+              <canvas id="monthlyPLChart"></canvas>
+            </div>
+          </div>
+          <div class="summary">
+            <p>Total P/L: $12,500</p>
+            <p>Winning Trades: 65%</p>
+            <p>Average Daily Return: 1.2%</p>
+          </div>
+        </section>
+
+        <!-- Trade Log -->
+        <section id="tradelog" class="panel">
+          <h3>Trade Log</h3>
+          <table>
+            <tr>
+              <th>Date</th>
+              <th>Instrument</th>
+              <th>Position Size</th>
+              <th>Entry</th>
+              <th>Exit</th>
+              <th>P/L</th>
+              <th>Setup Type</th>
+              <th>Duration</th>
+            </tr>
+            <tr>
+              <td>May 1</td>
+              <td>EUR/USD</td>
+              <td>$5,000</td>
+              <td>1.1200</td>
+              <td>1.1250</td>
+              <td>+$250</td>
+              <td>FVG</td>
+              <td>30 min</td>
+            </tr>
+            <tr>
+              <td>May 2</td>
+              <td>GBP/USD</td>
+              <td>$3,000</td>
+              <td>1.3050</td>
+              <td>1.3000</td>
+              <td>-$150</td>
+              <td>Order Block</td>
+              <td>1 hr</td>
+            </tr>
+          </table>
+        </section>
+
+        <!-- HTML for Risk Dashboard -->
+        <section id="risk" class="panel">
+          <h3>Risk Dashboard</h3>
+          <div class="risk-charts">
+            <!-- Max Drawdown Line Chart -->
+            <div class="chart" id="drawdown-chart">
+              <canvas id="drawdownChart"></canvas>
+              <p>Max Drawdown: <span id="drawdown-value">-10%</span></p>
+            </div>
+
+            <!-- Average Risk per Trade Bar Chart -->
+            <div class="chart" id="risk-trade-chart">
+              <canvas id="riskTradeChart"></canvas>
+              <p>Avg Risk/Trade: <span id="risk-trade-value">2%</span></p>
+            </div>
+
+            <!-- Reward/Risk Ratio Donut Chart -->
+            <div class="chart" id="reward-risk-chart">
+              <canvas id="rewardRiskChart"></canvas>
+              <p>Reward/Risk: <span id="reward-risk-value">1.5</span></p>
+            </div>
+
+            <!-- Position Sizing Histogram -->
+            <div class="chart" id="position-sizing-chart">
+              <canvas id="positionSizingChart"></canvas>
+              <p>Position Size: <span id="position-sizing-value">0.5</span></p>
+            </div>
+
+            <!-- Win Rate by Risk Level Pie Chart -->
+            <div class="chart" id="win-rate-risk-chart">
+              <canvas id="winRateRiskChart"></canvas>
+              <p>Win Rate: <span id="win-rate-risk-value">65%</span></p>
+            </div>
+
+            <!-- Risk/Reward Analysis Chart -->
+            <div class="chart" id="risk-reward-analysis-chart">
+              <canvas id="riskRewardAnalysisChart"></canvas>
+              <p>
+                Risk/Reward Analysis:
+                <span id="risk-reward-analysis-value">1.2</span>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Psychological Tracker -->
+        <section id="psych" class="panel">
+          <h3>Psychological Tracker</h3>
+          <canvas id="emotionHeatMap"></canvas>
+          <div class="emotion-log">
+            <p>May 3: Anxious (Low Confidence)</p>
+            <p>May 4: Confident (High Confidence)</p>
+          </div>
+        </section>
+
+        <!-- Strategy Evaluation -->
+        <section id="strategy" class="panel">
+          <h3>Strategy Evaluation</h3>
+          <canvas id="strategyBarChart"></canvas>
+          <div>FVG Success Rate: 75%</div>
+          <div>Order Block Success Rate: 65%</div>
+        </section>
+
+        <!-- Advanced Analytics -->
+        <section id="analytics" class="panel">
+          <h3>Advanced Analytics</h3>
+          <canvas id="scatterPlot"></canvas>
+          <div>Sharpe Ratio: 1.5</div>
+          <div>Win/Loss Ratio: 2.1</div>
+        </section>
+
+        <!-- Calendar Widget -->
+        <section id="calendar" class="panel">
+          <h3>Trading Calendar</h3>
+          <div id="calendar-widget">Upcoming Events:</div>
+          <ul>
+            <li>May 10: FOMC Meeting</li>
+            <li>May 12: CPI Data Release</li>
+          </ul>
+        </section>
+
+        <!-- Goals & Milestones -->
+        <section id="goals" class="panel">
+          <h3>Goals & Milestones</h3>
+          <ul>
+            <li>Increase Average Win Rate to 70% (Progress: 65%)</li>
+            <li>Reduce Drawdown to <5% (Current: 6%)</li>
+            <li>Achieve $20,000 in P/L by Q2</li>
+          </ul>
+        </section>
+      </main>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
